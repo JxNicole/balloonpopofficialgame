@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddamn7tpkvdw"]
+
+[ext_resource type="Theme" uid="uid://c552hovyx5b3" path="res://Themes/CloudBackgroundTheme.tres" id="1_8nc3o"]
+[ext_resource type="Texture2D" uid="uid://c1ivajqkfly67" path="res://GodotScenes/PopBackground.png" id="2_sy6qn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_22tsr"]
+texture = ExtResource("2_sy6qn")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1080.0
+offset_bottom = 1911.0
+theme = ExtResource("1_8nc3o")
+theme_override_styles/panel = SubResource("StyleBoxTexture_22tsr")

@@ -1,0 +1,128 @@
+[gd_scene load_steps=18 format=3 uid="uid://do1ywxs1kelvj"]
+
+[ext_resource type="Script" path="res://GodotScenes/RedBalloon.area_2d.gd" id="1_14rbp"]
+[ext_resource type="Texture2D" uid="uid://yc4rjegav3cw" path="res://GodotScenes/RedBalloonIdle.png" id="2_0u6n3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4dvx"]
+radius = 14.2522
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_58lek"]
+atlas = ExtResource("2_0u6n3")
+region = Rect2(0, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nn8w5"]
+atlas = ExtResource("2_0u6n3")
+region = Rect2(32, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ee2f2"]
+atlas = ExtResource("2_0u6n3")
+region = Rect2(64, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dtdy3"]
+atlas = ExtResource("2_0u6n3")
+region = Rect2(96, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i7xuo"]
+atlas = ExtResource("2_0u6n3")
+region = Rect2(128, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jmytt"]
+atlas = ExtResource("2_0u6n3")
+region = Rect2(160, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4j02p"]
+atlas = ExtResource("2_0u6n3")
+region = Rect2(192, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nc1ya"]
+atlas = ExtResource("2_0u6n3")
+region = Rect2(0, 64, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ako01"]
+atlas = ExtResource("2_0u6n3")
+region = Rect2(48, 64, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t5iwf"]
+atlas = ExtResource("2_0u6n3")
+region = Rect2(96, 64, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bfq2g"]
+atlas = ExtResource("2_0u6n3")
+region = Rect2(144, 64, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5pthq"]
+atlas = ExtResource("2_0u6n3")
+region = Rect2(192, 64, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cb741"]
+atlas = ExtResource("2_0u6n3")
+region = Rect2(240, 64, 48, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ifgh7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_58lek")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nn8w5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ee2f2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dtdy3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i7xuo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jmytt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4j02p")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nc1ya")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ako01")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t5iwf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bfq2g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5pthq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cb741")
+}],
+"loop": false,
+"name": &"pop",
+"speed": 9.0
+}]
+
+[node name="Red Balloon" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(143, 127)
+scale = Vector2(4, 4)
+script = ExtResource("1_14rbp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.5, -12)
+shape = SubResource("CircleShape2D_g4dvx")
+one_way_collision_margin = 0.0
+debug_color = Color(0.367072, 0.478633, 1, 0.42)
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Area2D"]
+sprite_frames = SubResource("SpriteFrames_ifgh7")
+animation = &"idle"

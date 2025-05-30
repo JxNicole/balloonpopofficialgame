@@ -1,0 +1,61 @@
+[gd_scene load_steps=9 format=3 uid="uid://btsgnqiskocdm"]
+
+[ext_resource type="Texture2D" uid="uid://qppd6rp3vl05" path="res://GodotScenes/BlueBalloonAnimattion.png" id="1_4h3t4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_imp24"]
+atlas = ExtResource("1_4h3t4")
+region = Rect2(0, 0, 48, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jv4tw"]
+atlas = ExtResource("1_4h3t4")
+region = Rect2(48, 0, 48, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s1i62"]
+atlas = ExtResource("1_4h3t4")
+region = Rect2(96, 0, 48, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_641ww"]
+atlas = ExtResource("1_4h3t4")
+region = Rect2(144, 0, 48, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t0uhg"]
+atlas = ExtResource("1_4h3t4")
+region = Rect2(192, 0, 48, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ddt0"]
+atlas = ExtResource("1_4h3t4")
+region = Rect2(240, 0, 48, 61)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pg5n5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_imp24")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jv4tw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s1i62")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_641ww")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t0uhg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ddt0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(480, 826)
+scale = Vector2(18.8333, 16.6803)
+sprite_frames = SubResource("SpriteFrames_pg5n5")
+frame_progress = 0.511379

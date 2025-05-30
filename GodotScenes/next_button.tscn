@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://ei3rk7qasoux"]
+
+[ext_resource type="Theme" uid="uid://di8j0vc35jjfo" path="res://Themes/Button.tres" id="1_eanag"]
+[ext_resource type="FontFile" uid="uid://u2glbe4yi5or" path="res://Daydream.ttf" id="2_hf2a1"]
+[ext_resource type="Texture2D" uid="uid://g65gb7cfq3na" path="res://GodotScenes/TilesetPopBalloon.png" id="3_056ll"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d3f1r"]
+texture = ExtResource("3_056ll")
+region_rect = Rect2(432, 176, 46, 30)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m6ju7"]
+texture = ExtResource("3_056ll")
+region_rect = Rect2(480, 176, 46, 30)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gmala"]
+texture = ExtResource("3_056ll")
+region_rect = Rect2(481, 209, 46, 30)
+
+[node name="Next Button" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -352.0
+offset_top = -200.0
+offset_right = -49.0
+offset_bottom = -87.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("1_eanag")
+theme_override_colors/font_hover_color = Color(0.568627, 0.431373, 0.290196, 1)
+theme_override_colors/font_pressed_color = Color(0.33677, 0.246723, 0.15344, 1)
+theme_override_colors/font_color = Color(0.568627, 0.431373, 0.290196, 1)
+theme_override_fonts/font = ExtResource("2_hf2a1")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxTexture_d3f1r")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m6ju7")
+theme_override_styles/normal = SubResource("StyleBoxTexture_gmala")
+text = "Next"

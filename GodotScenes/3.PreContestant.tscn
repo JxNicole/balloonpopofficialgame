@@ -1,0 +1,276 @@
+[gd_scene load_steps=13 format=3 uid="uid://btc0yxgu70sxx"]
+
+[ext_resource type="Script" path="res://GodotScenes/Scripts/3.pre_contestant.gd" id="1_xnvty"]
+[ext_resource type="Texture2D" uid="uid://c1ivajqkfly67" path="res://GodotScenes/PopBackground.png" id="2_yjjnb"]
+[ext_resource type="Theme" uid="uid://di8j0vc35jjfo" path="res://Themes/Button.tres" id="3_bi6u0"]
+[ext_resource type="Texture2D" uid="uid://g65gb7cfq3na" path="res://GodotScenes/TilesetPopBalloon.png" id="4_evw3y"]
+[ext_resource type="FontFile" uid="uid://u2glbe4yi5or" path="res://Daydream.ttf" id="5_l734v"]
+[ext_resource type="Theme" uid="uid://dk4r0p571327r" path="res://Themes/Light UI Panel.tres" id="6_rs07i"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tnord"]
+texture = ExtResource("4_evw3y")
+region_rect = Rect2(432, 176, 46, 30)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u5cbt"]
+texture = ExtResource("4_evw3y")
+region_rect = Rect2(480, 176, 46, 30)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x1e0r"]
+texture = ExtResource("4_evw3y")
+region_rect = Rect2(481, 209, 46, 30)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_73xbs"]
+bg_color = Color(1, 0.933333, 0.843137, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.901961, 0.788235, 0.635294, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.862745, 0.729412, 0.545098, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 10)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q4qkp"]
+texture = ExtResource("4_evw3y")
+region_rect = Rect2(337, 1, 78, 30)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s4j0r"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.645724, 0, 0, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[node name="Contestant Control1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xnvty")
+
+[node name="PopBackground" type="Sprite2D" parent="."]
+position = Vector2(539.625, 960.5)
+scale = Vector2(1.82868, 1.49922)
+texture = ExtResource("2_yjjnb")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0.745098)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -352.0
+offset_top = -418.0
+offset_right = 551.0
+offset_bottom = 229.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.678431, 0.894118, 0.92549, 1)
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -352.0
+offset_top = -200.0
+offset_right = -49.0
+offset_bottom = -87.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("3_bi6u0")
+theme_override_styles/hover = SubResource("StyleBoxTexture_tnord")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_u5cbt")
+theme_override_styles/normal = SubResource("StyleBoxTexture_x1e0r")
+
+[node name="Button Label" type="Label" parent="Button"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 21.0
+offset_right = 264.0
+offset_bottom = 88.0
+theme_override_colors/font_color = Color(0.568627, 0.431373, 0.290196, 1)
+theme_override_fonts/font = ExtResource("5_l734v")
+theme_override_font_sizes/font_size = 50
+text = "next"
+
+[node name="Wait Label" type="Label" parent="."]
+custom_minimum_size = Vector2(600, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -465.5
+offset_top = -160.0
+offset_right = 465.5
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.713017, 0.222755, 0, 1)
+theme_override_font_sizes/font_size = 45
+text = "Please wait for the Judge to ask a question."
+
+[node name="Top Panel" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -1560.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Top Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="Welcome Panel" type="Panel" parent="Top Panel/MarginContainer"]
+custom_minimum_size = Vector2(850, 250)
+layout_mode = 2
+theme = ExtResource("6_rs07i")
+theme_override_styles/panel = SubResource("StyleBoxFlat_73xbs")
+
+[node name="Welcome Label" type="Label" parent="Top Panel/MarginContainer/Welcome Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -417.0
+offset_top = -78.5
+offset_right = 417.0
+offset_bottom = 78.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.173587, 0.349547, 0.374877, 1)
+theme_override_fonts/font = ExtResource("5_l734v")
+theme_override_font_sizes/font_size = 58
+text = "Welcome to Balloon Pop!"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Role Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 413.0
+offset_bottom = -1325.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Role Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Role Control/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="You are Label" type="Label" parent="Role Control/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.172549, 0.34902, 0.376471, 1)
+theme_override_font_sizes/font_size = 50
+text = "You are a"
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="Role Control/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(700, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_q4qkp")
+
+[node name="Contestant" type="Label" parent="Role Control/MarginContainer/HBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -193.5
+offset_top = -46.0
+offset_right = 193.5
+offset_bottom = 46.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.243137, 0.552941, 0.133333, 1)
+theme_override_fonts/font = ExtResource("5_l734v")
+theme_override_font_sizes/font_size = 58
+text = "Contestant"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Clock" type="Panel" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -60.0
+offset_right = 75.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_s4j0r")
+
+[node name="Timer" type="Timer" parent="Clock"]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[node name="Label" type="Label" parent="Clock/Timer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.0
+offset_top = -25.0
+offset_right = 42.0
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("5_l734v")
+theme_override_font_sizes/font_size = 60
+text = "#"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://wsh6hwb4tjja"]
+
+[ext_resource type="Script" path="res://BalloonManager.gd" id="1_ijtnt"]
+
+[node name="BalloonManager" type="Node"]
+script = ExtResource("1_ijtnt")

@@ -1,0 +1,10 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://dawv8h3524l8q"]
+
+[ext_resource type="Texture2D" uid="uid://g65gb7cfq3na" path="res://GodotScenes/TilesetPopBalloon.png" id="1_3wsj4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tly1o"]
+texture = ExtResource("1_3wsj4")
+region_rect = Rect2(19, 289, 27, 45)
+
+[resource]
+Panel/styles/panel = SubResource("StyleBoxTexture_tly1o")

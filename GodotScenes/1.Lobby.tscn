@@ -1,0 +1,323 @@
+[gd_scene load_steps=15 format=3 uid="uid://dnx6g1e3ssf4u"]
+
+[ext_resource type="Script" path="res://GodotScenes/Scripts/1.lobby.gd" id="1_yvo4f"]
+[ext_resource type="Texture2D" uid="uid://c1ivajqkfly67" path="res://GodotScenes/PopBackground.png" id="2_chhok"]
+[ext_resource type="FontFile" uid="uid://u2glbe4yi5or" path="res://Daydream.ttf" id="3_jetl0"]
+[ext_resource type="Script" path="res://GodotScenes/Scripts/start_ui.gd" id="4_ns6i4"]
+[ext_resource type="Theme" uid="uid://di8j0vc35jjfo" path="res://Themes/Button.tres" id="5_5gosh"]
+[ext_resource type="Texture2D" uid="uid://g65gb7cfq3na" path="res://GodotScenes/TilesetPopBalloon.png" id="6_q64gq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cxtdu"]
+bg_color = Color(0.270588, 0.54902, 0.588235, 1)
+border_width_left = 10
+border_width_top = 20
+border_width_right = 10
+border_color = Color(0.152941, 0.352941, 0.380392, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i06e3"]
+bg_color = Color(0.152941, 0.352941, 0.380392, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e0wes"]
+bg_color = Color(0.099597, 0.250777, 0.271489, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p5sd2"]
+texture = ExtResource("6_q64gq")
+region_rect = Rect2(257, 33, 78, 30)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gtysj"]
+texture = ExtResource("6_q64gq")
+region_rect = Rect2(321, 241, 158, 30)
+
+[sub_resource type="Theme" id="Theme_74boi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5jwlh"]
+bg_color = Color(0.271799, 0.55049, 0.588872, 1)
+border_width_left = 10
+border_width_right = 10
+border_width_bottom = 20
+border_color = Color(0.152941, 0.352941, 0.380392, 1)
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a70fd"]
+texture = ExtResource("6_q64gq")
+region_rect = Rect2(433, 143, 29, 29)
+
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_yvo4f")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0.745098)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -351.0
+offset_top = -322.0
+offset_right = 2552.0
+offset_bottom = 2286.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.678431, 0.894118, 0.92549, 1)
+
+[node name="PopBackground2" type="Sprite2D" parent="."]
+position = Vector2(540, 960)
+scale = Vector2(1.82868, 1.49922)
+texture = ExtResource("2_chhok")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = 818.0
+offset_right = 1080.0
+offset_bottom = 1920.0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cxtdu")
+
+[node name="Panel" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = -50.0
+offset_right = 250.0
+offset_bottom = 2.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_i06e3")
+
+[node name="Label" type="Label" parent="Panel/Panel"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 10.0
+offset_right = 154.0
+offset_bottom = 52.0
+theme_override_colors/font_color = Color(0.571661, 0.848942, 0.889803, 1)
+theme_override_fonts/font = ExtResource("3_jetl0")
+theme_override_font_sizes/font_size = 25
+text = "Base"
+horizontal_alignment = 1
+
+[node name="Panel2" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 300.0
+offset_top = -50.0
+offset_right = 500.0
+offset_bottom = 2.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_e0wes")
+
+[node name="Label" type="Label" parent="Panel/Panel2"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 10.0
+offset_right = 154.0
+offset_bottom = 52.0
+theme_override_colors/font_color = Color(0.270588, 0.54902, 0.588235, 1)
+theme_override_fonts/font = ExtResource("3_jetl0")
+theme_override_font_sizes/font_size = 25
+text = "Prem"
+horizontal_alignment = 1
+
+[node name="Start UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("4_ns6i4")
+
+[node name="1 Play Game Container" type="MarginContainer" parent="Start UI"]
+custom_minimum_size = Vector2(900, 800)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 790.0
+offset_right = 1029.0
+offset_bottom = 1880.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Start UI/1 Play Game Container"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Ready?" type="Label" parent="Start UI/1 Play Game Container/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 55
+text = "Ready?"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="Start UI/1 Play Game Container/VBoxContainer"]
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("5_5gosh")
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.168627, 0.670588, 0.509804, 1)
+theme_override_colors/font_pressed_color = Color(0.219844, 0.455588, 0.371384, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.143699, 0.320597, 0.258694, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_jetl0")
+theme_override_font_sizes/font_size = 75
+text = "PLAY"
+
+[node name="YellowPanel" type="Panel" parent="Start UI/1 Play Game Container/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(650, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_p5sd2")
+
+[node name="Join Game" type="Label" parent="Start UI/1 Play Game Container/VBoxContainer/YellowPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -290.5
+offset_top = -44.5
+offset_right = 290.5
+offset_bottom = 44.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.162719, 0.353608, 0.342689, 1)
+theme_override_fonts/font = ExtResource("3_jetl0")
+theme_override_font_sizes/font_size = 65
+text = "JOIN GAME"
+
+[node name="Load UI" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1080.0
+offset_top = 845.0
+offset_right = 1080.0
+offset_bottom = 1908.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="2 Loading Players Container" type="MarginContainer" parent="Load UI"]
+layout_mode = 0
+offset_right = 1080.0
+offset_bottom = 1000.0
+size_flags_horizontal = 4
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Load UI/2 Loading Players Container"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Label" type="Label" parent="Load UI/2 Loading Players Container/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "Players loading please wait."
+
+[node name="Loading" type="Panel" parent="Load UI/2 Loading Players Container/VBoxContainer"]
+custom_minimum_size = Vector2(500, 150)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_gtysj")
+
+[node name="Loading2" type="Panel" parent="Load UI/2 Loading Players Container/VBoxContainer"]
+custom_minimum_size = Vector2(500, 150)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_gtysj")
+
+[node name="Loading3" type="Panel" parent="Load UI/2 Loading Players Container/VBoxContainer"]
+custom_minimum_size = Vector2(500, 150)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_gtysj")
+
+[node name="Loading4" type="Panel" parent="Load UI/2 Loading Players Container/VBoxContainer"]
+custom_minimum_size = Vector2(500, 150)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_gtysj")
+
+[node name="Top User Panel" type="Panel" parent="."]
+layout_mode = 2
+offset_right = 1080.0
+offset_bottom = 575.0
+theme = SubResource("Theme_74boi")
+theme_override_styles/panel = SubResource("StyleBoxFlat_5jwlh")
+
+[node name="User Container" type="MarginContainer" parent="Top User Panel"]
+layout_mode = 0
+offset_right = 1079.0
+offset_bottom = 562.0
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Top User Panel/User Container"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Top User Panel/User Container/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Char" type="Panel" parent="Top User Panel/User Container/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_a70fd")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Top User Panel/User Container/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TextEdit" type="TextEdit" parent="Top User Panel/User Container/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/background_color = Color(0.329412, 0.635294, 0.678431, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+placeholder_text = "Edit username"
+
+[node name="Score Placeholder" type="Label" parent="Top User Panel/User Container/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "0 XP          0 Wins          0 Pops"
+
+[node name="TextEdit" type="TextEdit" parent="Top User Panel/User Container/VBoxContainer"]
+custom_minimum_size = Vector2(600, 250)
+layout_mode = 2
+theme_override_colors/background_color = Color(0.328054, 0.633449, 0.67651, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+placeholder_text = "Bio: Include your location, interest, or give an introduction!"
+wrap_mode = 1
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("res://GodotScenes/1.Lobby.tscn", "res://GodotScenes/2.Judge.tscn", "res://GodotScenes/3.Contestant.tscn")
+spawn_path = NodePath("..")
+spawn_limit = 2
+
+[node name="WebSocketClient" type="Node" parent="."]
+
+[node name="Client" type="Node" parent="WebSocketClient"]

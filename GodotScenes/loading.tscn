@@ -1,0 +1,126 @@
+[gd_scene load_steps=6 format=3 uid="uid://cbkr3r32l7ou"]
+
+[ext_resource type="Texture2D" uid="uid://c1ivajqkfly67" path="res://GodotScenes/PopBackground.png" id="1_qe0i3"]
+[ext_resource type="FontFile" uid="uid://u2glbe4yi5or" path="res://Daydream.ttf" id="4_cjyc3"]
+[ext_resource type="Theme" uid="uid://dk4r0p571327r" path="res://Themes/Light UI Panel.tres" id="5_qswtj"]
+[ext_resource type="Theme" uid="uid://dpdgfrp38nchm" path="res://Themes/Dark UI Panel.tres" id="6_7s8ei"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_73xbs"]
+bg_color = Color(1, 0.933333, 0.843137, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.901961, 0.788235, 0.635294, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.862745, 0.729412, 0.545098, 1)
+shadow_size = 1
+shadow_offset = Vector2(0, 10)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PopBackground2" type="Sprite2D" parent="."]
+position = Vector2(539.625, 960.5)
+scale = Vector2(1.82868, 1.49922)
+texture = ExtResource("1_qe0i3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0.745098)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -351.0
+offset_top = -322.0
+offset_right = 552.0
+offset_bottom = 325.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.678431, 0.894118, 0.92549, 1)
+
+[node name="Welcome Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(850, 250)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -505.0
+offset_top = 35.0
+offset_right = 505.0
+offset_bottom = 410.0
+grow_horizontal = 2
+theme = ExtResource("5_qswtj")
+theme_override_styles/panel = SubResource("StyleBoxFlat_73xbs")
+
+[node name="Welcome" type="Label" parent="Welcome Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -417.0
+offset_top = -78.5
+offset_right = 417.0
+offset_bottom = 78.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.173587, 0.349547, 0.374877, 1)
+theme_override_fonts/font = ExtResource("4_cjyc3")
+theme_override_font_sizes/font_size = 58
+text = "Welcome to POP the Balloon"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Question Panel" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -476.5
+offset_top = 40.0
+offset_right = 476.5
+offset_bottom = 316.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("6_7s8ei")
+
+[node name="TextEdit" type="TextEdit" parent="Question Panel"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 13.0
+offset_right = 941.0
+offset_bottom = 262.0
+theme_override_colors/background_color = Color(0.901961, 0.788235, 0.635294, 1)
+theme_override_colors/font_placeholder_color = Color(1, 0.966755, 0.922036, 1)
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Type Here..."
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -373.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.0275793, 0.0992992, 0.109696, 1)
+theme_override_font_sizes/font_size = 35
+text = "Thank you for your submission. One moment..."
+horizontal_alignment = 1
+vertical_alignment = 1
