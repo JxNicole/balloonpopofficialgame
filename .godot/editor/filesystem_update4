@@ -1,0 +1,9 @@
+res://GodotScenes/0.Login.tscn
+res://Themes/Button.tres
+res://GodotScenes/1.Lobby.tscn
+res://Themes/Light UI Panel.tres
+res://Themes/Dark UI Panel.tres
+res://GodotScenes/2.Judge.tscn
+res://GodotScenes/3.Contestant.tscn
+res://GodotScenes/3.PreContestant.tscn
+res://GodotScenes/4.PopBalloon.tscn
