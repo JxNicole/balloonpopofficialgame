@@ -1,60 +1,53 @@
+# File: res://GodotScenes/Scripts/0.login.gd
 extends Control
 
-# const SERVER_PORT = 8080
-# const SERVER_IP = "127.0.0.1"
+const LOBBY_SCENE_PATH = "res://GodotScenes/1.Lobby.tscn"
+const SAVE_URL        = "http://localhost:8080/save_user.php"
 
-# const lobby = "res://GodotScenes/1.Lobby.tscn"
-
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-	# if OS.has_feature("dedicated_server"):
-	# if this is a dedicated server, run as a server
-	# _on_host_pressed()
+	print(">>> Login Control _ready() is running!")
+	$HTTPRequest.connect("request_completed", Callable(self, "_on_HTTPRequest_request_completed"))
 
-func _on_host_pressed():
-	# print ("host pressed")
-	# var peer = ENetMultiplayerPeer.new()
-	# peer.create_server(SERVER_PORT)
-	# multiplayer.multiplayer_peer = peer
-	# start_game()
-	pass
 
-func start_game():
-	# $UI.hide
-	# if multiplayer.is_server():
-		# print("server changing to gameplay scene...")
-		# change_level.call_deferred(load(lobby))
-	pass
+# This name must match exactly what the editor shows under pressed() for your Button node:
+func _on_Button_pressed() -> void:
+	print(">>> Next button was pressed!")  # <— This line should appear in Output when you click Next
 
-func change_game_play(scene: PackedScene):
-	# var game_play = $??? (level)
-	# for c in game.get_children():
-		# game.remove_child(c)
-		# c.queue_free()
-		
-	# game.add_child(scene.instantiate())
-	pass
+	var name_text     = $"UI/VBoxContainer/Name Control/VBoxContainer/Name TextEdit".text
+	var username_text = $"UI/VBoxContainer/Name Control/VBoxContainer/Username TextEdit".text
 
-func _on_client_pressed():
-	# print ("client pressed")
-	# var = ENetMultiplayerPeer.new()
-	# peer.create_client(SERVER_IP, SERVER_PORT)
-	# multiplayer.multiplayer_peer = peer
-	# start_game()
-	pass
+	if username_text.strip_edges() == "":
+		print("Username is required!")
+		return
 
-func _on_join_game_pressed():
-	# print("join game pressed.")
-	# $UI.hide()
-	# TODO: go to lobby scene (or gameplay?) 
-	# load lobby scene into lobby placeholder
-	# $LobbyPlaceholder.add_child(lobby.instantiate())
-	pass
+	# (Optionally, show that “username works” label here, if you want)
+	$"UI/VBoxContainer/Name Control/VBoxContainer/Label".visible = true
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+	var post_data = []
+	post_data.append("username=" + username_text.percent_encode())
+	post_data.append("bio="      + name_text.percent_encode())
+	var body = "&".join(post_data)
+
+	var err = $HTTPRequest.request(
+		SAVE_URL,
+		[],
+		false,
+		HTTPClient.METHOD_POST,
+		body
+	)
+	if err != OK:
+		print("Failed to send request:", err)
+	else:
+		print("Request sent to server!")
+
+func _on_HTTPRequest_request_completed(result, response_code, headers, body) -> void:
+	var server_response = body.get_string_from_utf8()
+	print("Server response:", server_response)
+
+	if server_response.begins_with("User saved successfully"):
+		get_tree().change_scene_to_file(LOBBY_SCENE_PATH)
+	else:
+		print("Unexpected server response, staying on login.")
+
 func _process(delta: float) -> void:
 	pass
-
-func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://GodotScenes/1.Lobby.tscn")
