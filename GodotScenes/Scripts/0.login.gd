@@ -10,7 +10,7 @@ func _ready() -> void:
 
 
 # This name must match exactly what the editor shows under pressed() for your Button node:
-func _on_Button_pressed() -> void:
+func _on_button_pressed() -> void:
 	print(">>> Next button was pressed!")  # <— This line should appear in Output when you click Next
 
 	var name_text     = $"UI/VBoxContainer/Name Control/VBoxContainer/Name TextEdit".text
@@ -24,6 +24,7 @@ func _on_Button_pressed() -> void:
 	$"UI/VBoxContainer/Name Control/VBoxContainer/Label".visible = true
 
 	var post_data = []
+## FAILS HERE
 	post_data.append("username=" + username_text.percent_encode())
 	post_data.append("bio="      + name_text.percent_encode())
 	var body = "&".join(post_data)
@@ -39,6 +40,10 @@ func _on_Button_pressed() -> void:
 		print("Failed to send request:", err)
 	else:
 		print("Request sent to server!")
+		
+	get_tree().change_scene_to_file("res://GodotScenes/1.Lobby.tscn")
+
+
 
 func _on_HTTPRequest_request_completed(result, response_code, headers, body) -> void:
 	var server_response = body.get_string_from_utf8()

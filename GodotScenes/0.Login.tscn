@@ -21,15 +21,15 @@ shadow_color = Color(0.157744, 0.353875, 0.380674, 1)
 shadow_size = 8
 shadow_offset = Vector2(0, 10)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2skdo"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7epeb"]
 texture = ExtResource("4_0i0vu")
 region_rect = Rect2(432, 176, 46, 30)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_57otr"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u627p"]
 texture = ExtResource("4_0i0vu")
 region_rect = Rect2(480, 176, 46, 30)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ur5mu"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_brm1n"]
 texture = ExtResource("4_0i0vu")
 region_rect = Rect2(481, 209, 46, 30)
 
@@ -92,35 +92,6 @@ text = "Balloon Pop!"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
-
-[node name="Button" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -352.0
-offset_top = -200.0
-offset_right = -49.0
-offset_bottom = -87.0
-grow_horizontal = 0
-grow_vertical = 0
-theme = ExtResource("3_lbk1d")
-theme_override_styles/hover = SubResource("StyleBoxTexture_2skdo")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_57otr")
-theme_override_styles/normal = SubResource("StyleBoxTexture_ur5mu")
-
-[node name="Label" type="Label" parent="Button"]
-layout_mode = 0
-offset_left = 44.0
-offset_top = 21.0
-offset_right = 264.0
-offset_bottom = 88.0
-theme_override_colors/font_color = Color(0.568627, 0.431373, 0.290196, 1)
-theme_override_fonts/font = ExtResource("2_qndqj")
-theme_override_font_sizes/font_size = 50
-text = "next"
 
 [node name="UI" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -256,4 +227,28 @@ text = "Non-Binary"
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 
-[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -352.0
+offset_top = -200.0
+offset_right = -49.0
+offset_bottom = -87.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("3_lbk1d")
+theme_override_colors/font_hover_pressed_color = Color(0.862745, 0.72549, 0.541176, 1)
+theme_override_colors/font_hover_color = Color(0.647059, 0.505882, 0.360784, 1)
+theme_override_colors/font_color = Color(0.647059, 0.505882, 0.360784, 1)
+theme_override_fonts/font = ExtResource("2_qndqj")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxTexture_7epeb")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_u627p")
+theme_override_styles/normal = SubResource("StyleBoxTexture_brm1n")
+text = "next"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

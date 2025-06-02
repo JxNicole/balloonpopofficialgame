@@ -1,70 +1,70 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1748570752
-BalloonManager.gd::GDScript::-1::1748570651::0::1::::<>Node<>::
-Daydream.ttf::FontFile::1459899077862431045::1748570651::1748570753::1::::<><>::
-icon.svg::CompressedTexture2D::6416830106057295238::1748570651::1748570753::1::::<><>::
-IdleBalloon.gd::GDScript::-1::1748570651::0::1::::<>Control<>::
-::res://GodotScenes/::1748570698
-0.Login.tscn::PackedScene::1496507710292566630::1748570651::0::1::::<><>::res://GodotScenes/Scripts/0.login.gd<>uid://c1ivajqkfly67::::res://GodotScenes/PopBackground.png<>uid://u2glbe4yi5or::::res://Daydream.ttf<>uid://di8j0vc35jjfo::::res://Themes/Button.tres<>uid://g65gb7cfq3na::::res://GodotScenes/TilesetPopBalloon.png
-1.Lobby.tscn::PackedScene::8121092021339570354::1748570651::0::1::::<><>::res://GodotScenes/Scripts/1.lobby.gd<>uid://c1ivajqkfly67::::res://GodotScenes/PopBackground.png<>uid://u2glbe4yi5or::::res://Daydream.ttf<>res://GodotScenes/Scripts/start_ui.gd<>uid://di8j0vc35jjfo::::res://Themes/Button.tres<>uid://g65gb7cfq3na::::res://GodotScenes/TilesetPopBalloon.png
-2.Judge.tscn::PackedScene::433207522496111052::1748570651::0::1::::<><>::uid://c1ivajqkfly67::::res://GodotScenes/PopBackground.png<>res://GodotScenes/Scripts/2.judge.gd<>uid://di8j0vc35jjfo::::res://Themes/Button.tres<>uid://dk4r0p571327r::::res://Themes/Light UI Panel.tres<>uid://u2glbe4yi5or::::res://Daydream.ttf<>uid://g65gb7cfq3na::::res://GodotScenes/TilesetPopBalloon.png<>uid://dpdgfrp38nchm::::res://Themes/Dark UI Panel.tres
-3.Contestant.tscn::PackedScene::5504489449407835218::1748570651::0::1::::<><>::uid://c1ivajqkfly67::::res://GodotScenes/PopBackground.png<>res://GodotScenes/Scripts/3.contestant.gd<>uid://di8j0vc35jjfo::::res://Themes/Button.tres<>uid://g65gb7cfq3na::::res://GodotScenes/TilesetPopBalloon.png<>uid://u2glbe4yi5or::::res://Daydream.ttf<>uid://dk4r0p571327r::::res://Themes/Light UI Panel.tres<>uid://dpdgfrp38nchm::::res://Themes/Dark UI Panel.tres
-3.PreContestant.tscn::PackedScene::3725699470455070261::1748570651::0::1::::<><>::res://GodotScenes/Scripts/3.pre_contestant.gd<>uid://c1ivajqkfly67::::res://GodotScenes/PopBackground.png<>uid://di8j0vc35jjfo::::res://Themes/Button.tres<>uid://g65gb7cfq3na::::res://GodotScenes/TilesetPopBalloon.png<>uid://u2glbe4yi5or::::res://Daydream.ttf<>uid://dk4r0p571327r::::res://Themes/Light UI Panel.tres
-4.PopBalloon.tscn::PackedScene::6381183939252886193::1748570651::0::1::::<><>::res://GodotScenes/4.pop_balloon.gd<>uid://c1ivajqkfly67::::res://GodotScenes/PopBackground.png<>uid://dpdgfrp38nchm::::res://Themes/Dark UI Panel.tres<>uid://b0lot0yb6lu1j::::res://Themes/Profile.tres<>uid://g65gb7cfq3na::::res://GodotScenes/TilesetPopBalloon.png<>uid://u2glbe4yi5or::::res://Daydream.ttf<>uid://lp5elt3q87fw::::res://GodotScenes/9.BlueBalloon.tscn<>uid://di8j0vc35jjfo::::res://Themes/Button.tres<>uid://culcf74ysq21n::::res://GodotScenes/9.GreenBalloon.tscn<>uid://do1ywxs1kelvj::::res://GodotScenes/9.RedBalloon.tscn
-4.pop_balloon.gd::GDScript::-1::1748570651::0::1::::<>Node2D<>::
-5.Summary.tscn::PackedScene::432620461849939847::1748570651::0::1::::<><>::res://GodotScenes/Scripts/5.summary.gd<>uid://c1ivajqkfly67::::res://GodotScenes/PopBackground.png<>uid://u2glbe4yi5or::::res://Daydream.ttf<>uid://ribf6tuf371a::::res://Themes/ButtonPlain.tres<>uid://dpdgfrp38nchm::::res://Themes/Dark UI Panel.tres
-9.BlueBalloon.tscn::PackedScene::804872207690909320::1748570651::0::1::::<><>::res://GodotScenes/Scripts/BlueBalloonArea.gd<>uid://dm7qhv5cxe4ev::::res://GodotScenes/BlueBalloonIdle.png<>uid://qppd6rp3vl05::::res://GodotScenes/BlueBalloonAnimattion.png
-9.GreenBalloon.tscn::PackedScene::6199458485058262605::1748570651::0::1::::<><>::res://GodotScenes/Scripts/GreenBalloon.area_2d.gd<>uid://bqximnr0skmor::::res://GodotScenes/GreenBalloon.png
-9.RedBalloon.tscn::PackedScene::8197077415948001407::1748570651::0::1::::<><>::res://GodotScenes/RedBalloon.area_2d.gd<>uid://yc4rjegav3cw::::res://GodotScenes/RedBalloonIdle.png
-ActionV2.tscn::PackedScene::7062489382359675685::1748570651::0::1::::<><>::uid://c1ivajqkfly67::::res://GodotScenes/PopBackground.png<>res://GodotScenes/Scripts/r_1_judge_ui.gd<>uid://g65gb7cfq3na::::res://GodotScenes/TilesetPopBalloon.png<>uid://ribf6tuf371a::::res://Themes/ButtonPlain.tres<>uid://u2glbe4yi5or::::res://Daydream.ttf<>res://GodotScenes/Scripts/users_action.gd<>res://GodotScenes/Scripts/player_1.gd<>res://GodotScenes/Scripts/player_2.gd<>res://GodotScenes/Scripts/player_3.gd<>res://GodotScenes/Scripts/label.gd
-balloon_manager.tscn::PackedScene::1581794139904300254::1748570651::0::1::::<><>::res://BalloonManager.gd
-BlueBalloonAnimattion.png::CompressedTexture2D::1154904931997943716::1748570651::1748570753::1::::<><>::
-BlueBalloonIdle.png::CompressedTexture2D::8068573384763485281::1748570651::1748570753::1::::<><>::
-GreenBalloon.png::CompressedTexture2D::3557430745939558509::1748570651::1748570753::1::::<><>::
-loading.tscn::PackedScene::143081091678394296::1748570651::0::1::::<><>::uid://c1ivajqkfly67::::res://GodotScenes/PopBackground.png<>uid://u2glbe4yi5or::::res://Daydream.ttf<>uid://dk4r0p571327r::::res://Themes/Light UI Panel.tres<>uid://dpdgfrp38nchm::::res://Themes/Dark UI Panel.tres
-next_button.tscn::PackedScene::299001406273385863::1748570651::0::1::::<><>::uid://di8j0vc35jjfo::::res://Themes/Button.tres<>uid://u2glbe4yi5or::::res://Daydream.ttf<>uid://g65gb7cfq3na::::res://GodotScenes/TilesetPopBalloon.png
-node_2d.tscn::PackedScene::6912562371356612783::1748570651::0::1::::<><>::
-PopBackground.png::CompressedTexture2D::6615541878744137094::1748570651::1748570753::1::::<><>::
-PopBalloon.tscn::PackedScene::3757555883229946058::1748570651::0::1::::<><>::uid://qppd6rp3vl05::::res://GodotScenes/BlueBalloonAnimattion.png
-RedBalloon.area_2d.gd::GDScript::-1::1748570651::0::1::::<>Area2D<>::
-RedBalloonIdle.png::CompressedTexture2D::1690452633270346802::1748570651::1748570753::1::::<><>::
-TilesetPopBalloon.png::CompressedTexture2D::486961098805776314::1748570651::1748570753::1::::<><>::
-::res://GodotScenes/Scripts/::1748570698
-0.login.gd::GDScript::-1::1748570651::0::1::::<>Control<>::
-1.lobby.gd::GDScript::-1::1748570651::0::1::::<>Control<>::
-2.judge.gd::GDScript::-1::1748570651::0::1::::<>Control<>::
-3.contestant.gd::GDScript::-1::1748570651::0::1::::<>Control<>::
-3.pre_contestant.gd::GDScript::-1::1748570651::0::1::::<>Control<>::
-4.contestant.gd::GDScript::-1::1748570651::0::1::::<>Control<>::
-4.pop_balloon.gd::GDScript::-1::1748570651::0::1::::<>Control<>::
-5.summary.gd::GDScript::-1::1748570651::0::1::::<>Control<>::
-BlueBalloonArea.gd::GDScript::-1::1748570651::0::1::::<>Area2D<>::
-GreenBalloon.area_2d.gd::GDScript::-1::1748570651::0::1::::<>Area2D<>::
-idleb.gd::GDScript::-1::1748570651::0::1::::<>Sprite2D<>::
-input_ui.gd::GDScript::-1::1748570651::0::1::::<>Control<>::
-intro_gender.gd::GDScript::-1::1748570651::0::1::::<>Node<>::
-intro_name.gd::GDScript::-1::1748570651::0::1::::<>Node<>::
-intro_ui.gd::GDScript::-1::1748570651::0::1::::<>Control<>::
-judge_ui.gd::GDScript::-1::1748570651::0::1::::<>Control<>::
-label.gd::GDScript::-1::1748570651::0::1::::<>Label<>::
-load_ui.gd::GDScript::-1::1748570651::0::1::::<>Control<>::
-player_1.gd::GDScript::-1::1748570651::0::1::::<>MarginContainer<>::
-player_2.gd::GDScript::-1::1748570651::0::1::::<>MarginContainer<>::
-player_3.gd::GDScript::-1::1748570651::0::1::::<>MarginContainer<>::
-r_1_judge_ui.gd::GDScript::-1::1748570651::0::1::::<>Control<>::
-start_ui.gd::GDScript::-1::1748570651::0::1::::<>Control<>::
-text_edit.gd::GDScript::-1::1748570651::0::1::::<>TextEdit<>::
-thanks_label.gd::GDScript::-1::1748570651::0::1::::<>Label<>::
-ui.gd::GDScript::-1::1748570651::0::1::::<>Node<>::
-users_action.gd::GDScript::-1::1748570651::0::1::::<>Control<>::
-::res://Themes/::1748570698
-0CloudBackground.tscn::PackedScene::216781826824163952::1748570651::0::1::::<><>::uid://c552hovyx5b3::::res://Themes/CloudBackgroundTheme.tres<>uid://c1ivajqkfly67::::res://GodotScenes/PopBackground.png
-BlueBalloon.tres::Theme::7206012762033847670::1748570651::0::1::::<><>::uid://g65gb7cfq3na::::res://GodotScenes/TilesetPopBalloon.png
-Button.tres::Theme::7789489471242663556::1748570651::0::1::::<><>::uid://g65gb7cfq3na::::res://GodotScenes/TilesetPopBalloon.png
-ButtonPlain.tres::StyleBoxFlat::1209796668332986596::1748570651::0::1::::<><>::
-CloudBackgroundTheme.tres::Theme::204179136394151694::1748570651::0::1::::<><>::
-Dark UI Panel.tres::Theme::8218661987223914682::1748570651::0::1::::<><>::
-DarkPanelLG.tres::Theme::6038226823746791689::1748570651::0::1::::<><>::uid://g65gb7cfq3na::::res://GodotScenes/TilesetPopBalloon.png
-Light UI Panel.tres::Theme::7922095111736208573::1748570651::0::1::::<><>::
-Profile.tres::Theme::4164735248167869493::1748570651::0::1::::<><>::
-UIPanel.tres::StyleBoxFlat::3579277978720151473::1748570651::0::1::::<><>::
+::res://::1748823976
+BalloonManager.gd::GDScript::-1::1742691300::0::1::::<>Node<>::
+Daydream.ttf::FontFile::1459899077862431045::1734903850::1748822414::1::::<><>::
+icon.svg::CompressedTexture2D::6416830106057295238::1736734347::1748822414::1::::<><>::
+IdleBalloon.gd::GDScript::-1::1737934262::0::1::::<>Control<>::
+::res://GodotScenes/::1748823897
+0.Login.tscn::PackedScene::1496507710292566630::1748823897::0::1::::<><>::res://GodotScenes/Scripts/0.login.gd<>uid://c1ivajqkfly67::::res://GodotScenes/PopBackground.png<>uid://u2glbe4yi5or::::res://Daydream.ttf<>uid://di8j0vc35jjfo::::res://Themes/Button.tres<>uid://g65gb7cfq3na::::res://GodotScenes/TilesetPopBalloon.png
+1.Lobby.tscn::PackedScene::8121092021339570354::1748823694::0::1::::<><>::res://GodotScenes/Scripts/1.lobby.gd<>uid://c1ivajqkfly67::::res://GodotScenes/PopBackground.png<>uid://u2glbe4yi5or::::res://Daydream.ttf<>res://GodotScenes/Scripts/start_ui.gd<>uid://di8j0vc35jjfo::::res://Themes/Button.tres<>uid://g65gb7cfq3na::::res://GodotScenes/TilesetPopBalloon.png
+2.Judge.tscn::PackedScene::433207522496111052::1748538086::0::1::::<><>::uid://c1ivajqkfly67::::res://GodotScenes/PopBackground.png<>res://GodotScenes/Scripts/2.judge.gd<>uid://di8j0vc35jjfo::::res://Themes/Button.tres<>uid://dk4r0p571327r::::res://Themes/Light UI Panel.tres<>uid://u2glbe4yi5or::::res://Daydream.ttf<>uid://g65gb7cfq3na::::res://GodotScenes/TilesetPopBalloon.png<>uid://dpdgfrp38nchm::::res://Themes/Dark UI Panel.tres
+3.Contestant.tscn::PackedScene::5504489449407835218::1748538086::0::1::::<><>::uid://c1ivajqkfly67::::res://GodotScenes/PopBackground.png<>res://GodotScenes/Scripts/3.contestant.gd<>uid://di8j0vc35jjfo::::res://Themes/Button.tres<>uid://g65gb7cfq3na::::res://GodotScenes/TilesetPopBalloon.png<>uid://u2glbe4yi5or::::res://Daydream.ttf<>uid://dk4r0p571327r::::res://Themes/Light UI Panel.tres<>uid://dpdgfrp38nchm::::res://Themes/Dark UI Panel.tres
+3.PreContestant.tscn::PackedScene::3725699470455070261::1748823694::0::1::::<><>::res://GodotScenes/Scripts/3.pre_contestant.gd<>uid://c1ivajqkfly67::::res://GodotScenes/PopBackground.png<>uid://di8j0vc35jjfo::::res://Themes/Button.tres<>uid://g65gb7cfq3na::::res://GodotScenes/TilesetPopBalloon.png<>uid://u2glbe4yi5or::::res://Daydream.ttf<>uid://dk4r0p571327r::::res://Themes/Light UI Panel.tres
+4.PopBalloon.tscn::PackedScene::6381183939252886193::1748538087::0::1::::<><>::res://GodotScenes/4.pop_balloon.gd<>uid://c1ivajqkfly67::::res://GodotScenes/PopBackground.png<>uid://dpdgfrp38nchm::::res://Themes/Dark UI Panel.tres<>uid://b0lot0yb6lu1j::::res://Themes/Profile.tres<>uid://g65gb7cfq3na::::res://GodotScenes/TilesetPopBalloon.png<>uid://u2glbe4yi5or::::res://Daydream.ttf<>uid://lp5elt3q87fw::::res://GodotScenes/9.BlueBalloon.tscn<>uid://di8j0vc35jjfo::::res://Themes/Button.tres<>uid://culcf74ysq21n::::res://GodotScenes/9.GreenBalloon.tscn<>uid://do1ywxs1kelvj::::res://GodotScenes/9.RedBalloon.tscn
+4.pop_balloon.gd::GDScript::-1::1742849753::0::1::::<>Node2D<>::
+5.Summary.tscn::PackedScene::432620461849939847::1748538087::0::1::::<><>::res://GodotScenes/Scripts/5.summary.gd<>uid://c1ivajqkfly67::::res://GodotScenes/PopBackground.png<>uid://u2glbe4yi5or::::res://Daydream.ttf<>uid://ribf6tuf371a::::res://Themes/ButtonPlain.tres<>uid://dpdgfrp38nchm::::res://Themes/Dark UI Panel.tres
+9.BlueBalloon.tscn::PackedScene::804872207690909320::1744225510::0::1::::<><>::res://GodotScenes/Scripts/BlueBalloonArea.gd<>uid://dm7qhv5cxe4ev::::res://GodotScenes/BlueBalloonIdle.png<>uid://qppd6rp3vl05::::res://GodotScenes/BlueBalloonAnimattion.png
+9.GreenBalloon.tscn::PackedScene::6199458485058262605::1744225510::0::1::::<><>::res://GodotScenes/Scripts/GreenBalloon.area_2d.gd<>uid://bqximnr0skmor::::res://GodotScenes/GreenBalloon.png
+9.RedBalloon.tscn::PackedScene::8197077415948001407::1744225510::0::1::::<><>::res://GodotScenes/RedBalloon.area_2d.gd<>uid://yc4rjegav3cw::::res://GodotScenes/RedBalloonIdle.png
+ActionV2.tscn::PackedScene::7062489382359675685::1742624503::0::1::::<><>::uid://c1ivajqkfly67::::res://GodotScenes/PopBackground.png<>res://GodotScenes/Scripts/r_1_judge_ui.gd<>uid://g65gb7cfq3na::::res://GodotScenes/TilesetPopBalloon.png<>uid://ribf6tuf371a::::res://Themes/ButtonPlain.tres<>uid://u2glbe4yi5or::::res://Daydream.ttf<>res://GodotScenes/Scripts/users_action.gd<>res://GodotScenes/Scripts/player_1.gd<>res://GodotScenes/Scripts/player_2.gd<>res://GodotScenes/Scripts/player_3.gd<>res://GodotScenes/Scripts/label.gd
+balloon_manager.tscn::PackedScene::1581794139904300254::1742843531::0::1::::<><>::res://BalloonManager.gd
+BlueBalloonAnimattion.png::CompressedTexture2D::1154904931997943716::1737940283::1748822414::1::::<><>::
+BlueBalloonIdle.png::CompressedTexture2D::8068573384763485281::1737942662::1748822414::1::::<><>::
+GreenBalloon.png::CompressedTexture2D::3557430745939558509::1742846343::1748822414::1::::<><>::
+loading.tscn::PackedScene::143081091678394296::1742873371::0::1::::<><>::uid://c1ivajqkfly67::::res://GodotScenes/PopBackground.png<>uid://u2glbe4yi5or::::res://Daydream.ttf<>uid://dk4r0p571327r::::res://Themes/Light UI Panel.tres<>uid://dpdgfrp38nchm::::res://Themes/Dark UI Panel.tres
+next_button.tscn::PackedScene::299001406273385863::1742849984::0::1::::<><>::uid://di8j0vc35jjfo::::res://Themes/Button.tres<>uid://u2glbe4yi5or::::res://Daydream.ttf<>uid://g65gb7cfq3na::::res://GodotScenes/TilesetPopBalloon.png
+node_2d.tscn::PackedScene::6912562371356612783::1742694226::0::1::::<><>::
+PopBackground.png::CompressedTexture2D::6615541878744137094::1736818437::1748822414::1::::<><>::
+PopBalloon.tscn::PackedScene::3757555883229946058::1738117035::0::1::::<><>::uid://qppd6rp3vl05::::res://GodotScenes/BlueBalloonAnimattion.png
+RedBalloon.area_2d.gd::GDScript::-1::1742846958::0::1::::<>Area2D<>::
+RedBalloonIdle.png::CompressedTexture2D::1690452633270346802::1742846355::1748822414::1::::<><>::
+TilesetPopBalloon.png::CompressedTexture2D::486961098805776314::1736818429::1748822414::1::::<><>::
+::res://GodotScenes/Scripts/::1748823602
+0.login.gd::GDScript::-1::1748823602::0::1::::<>Control<>::
+1.lobby.gd::GDScript::-1::1744770594::0::1::::<>Control<>::
+2.judge.gd::GDScript::-1::1742848243::0::1::::<>Control<>::
+3.contestant.gd::GDScript::-1::1742620178::0::1::::<>Control<>::
+3.pre_contestant.gd::GDScript::-1::1742625366::0::1::::<>Control<>::
+4.contestant.gd::GDScript::-1::1742083185::0::1::::<>Control<>::
+4.pop_balloon.gd::GDScript::-1::1742848303::0::1::::<>Control<>::
+5.summary.gd::GDScript::-1::1742624389::0::1::::<>Control<>::
+BlueBalloonArea.gd::GDScript::-1::1742846958::0::1::::<>Area2D<>::
+GreenBalloon.area_2d.gd::GDScript::-1::1742846958::0::1::::<>Area2D<>::
+idleb.gd::GDScript::-1::1737944326::0::1::::<>Sprite2D<>::
+input_ui.gd::GDScript::-1::1738857522::0::1::::<>Control<>::
+intro_gender.gd::GDScript::-1::1738855695::0::1::::<>Node<>::
+intro_name.gd::GDScript::-1::1738855590::0::1::::<>Node<>::
+intro_ui.gd::GDScript::-1::1738855573::0::1::::<>Control<>::
+judge_ui.gd::GDScript::-1::1738857278::0::1::::<>Control<>::
+label.gd::GDScript::-1::1738770808::0::1::::<>Label<>::
+load_ui.gd::GDScript::-1::1738269145::0::1::::<>Control<>::
+player_1.gd::GDScript::-1::1738770207::0::1::::<>MarginContainer<>::
+player_2.gd::GDScript::-1::1738770808::0::1::::<>MarginContainer<>::
+player_3.gd::GDScript::-1::1738770808::0::1::::<>MarginContainer<>::
+r_1_judge_ui.gd::GDScript::-1::1740878166::0::1::::<>Control<>::
+start_ui.gd::GDScript::-1::1738268581::0::1::::<>Control<>::
+text_edit.gd::GDScript::-1::1738284105::0::1::::<>TextEdit<>::
+thanks_label.gd::GDScript::-1::1738857318::0::1::::<>Label<>::
+ui.gd::GDScript::-1::1738269004::0::1::::<>Node<>::
+users_action.gd::GDScript::-1::1742081068::0::1::::<>Control<>::
+::res://Themes/::1748823388
+0CloudBackground.tscn::PackedScene::216781826824163952::1736819431::0::1::::<><>::uid://c552hovyx5b3::::res://Themes/CloudBackgroundTheme.tres<>uid://c1ivajqkfly67::::res://GodotScenes/PopBackground.png
+BlueBalloon.tres::Theme::7206012762033847670::1742846649::0::1::::<><>::uid://g65gb7cfq3na::::res://GodotScenes/TilesetPopBalloon.png
+Button.tres::Theme::7789489471242663556::1748823388::0::1::::<><>::uid://g65gb7cfq3na::::res://GodotScenes/TilesetPopBalloon.png
+ButtonPlain.tres::StyleBoxFlat::1209796668332986596::1748537845::0::1::::<><>::
+CloudBackgroundTheme.tres::Theme::204179136394151694::1736818397::0::1::::<><>::
+Dark UI Panel.tres::Theme::8218661987223914682::1748537845::0::1::::<><>::
+DarkPanelLG.tres::Theme::6038226823746791689::1738116274::0::1::::<><>::uid://g65gb7cfq3na::::res://GodotScenes/TilesetPopBalloon.png
+Light UI Panel.tres::Theme::7922095111736208573::1748823388::0::1::::<><>::
+Profile.tres::Theme::4164735248167869493::1737347889::0::1::::<><>::
+UIPanel.tres::StyleBoxFlat::3579277978720151473::1737511021::0::1::::<><>::
