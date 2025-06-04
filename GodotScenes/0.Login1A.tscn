@@ -1,11 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://vk6i7os0ow7o"]
+[gd_scene load_steps=11 format=3 uid="uid://noimy85njkf5"]
 
-[ext_resource type="Script" path="res://GodotScenes/Scripts/0.login.gd" id="1_n0ftr"]
-[ext_resource type="Texture2D" uid="uid://c1ivajqkfly67" path="res://GodotScenes/PopBackground.png" id="1_n5i6c"]
-[ext_resource type="FontFile" uid="uid://u2glbe4yi5or" path="res://Daydream.ttf" id="2_qndqj"]
-[ext_resource type="Theme" uid="uid://di8j0vc35jjfo" path="res://Themes/Button.tres" id="3_lbk1d"]
-[ext_resource type="Texture2D" uid="uid://g65gb7cfq3na" path="res://GodotScenes/TilesetPopBalloon.png" id="4_0i0vu"]
-[ext_resource type="ButtonGroup" uid="uid://datwpc5x53xo8" path="res://buttonGroupLogin.tres" id="4_bmjec"]
+[ext_resource type="Script" path="res://GodotScenes/Scripts/0.login.gd" id="1_fbq66"]
+[ext_resource type="Texture2D" uid="uid://c1ivajqkfly67" path="res://GodotScenes/PopBackground.png" id="2_fgmiv"]
+[ext_resource type="FontFile" uid="uid://u2glbe4yi5or" path="res://Daydream.ttf" id="3_xqp4o"]
+[ext_resource type="ButtonGroup" uid="uid://datwpc5x53xo8" path="res://buttonGroupLogin.tres" id="4_6hr56"]
+[ext_resource type="Theme" uid="uid://di8j0vc35jjfo" path="res://Themes/Button.tres" id="5_gy32m"]
+[ext_resource type="Texture2D" uid="uid://g65gb7cfq3na" path="res://GodotScenes/TilesetPopBalloon.png" id="6_ytgvi"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aq2pf"]
 bg_color = Color(0.55364, 0.839646, 0.880708, 1)
@@ -23,15 +23,15 @@ shadow_size = 8
 shadow_offset = Vector2(0, 10)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7epeb"]
-texture = ExtResource("4_0i0vu")
+texture = ExtResource("6_ytgvi")
 region_rect = Rect2(432, 176, 46, 30)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u627p"]
-texture = ExtResource("4_0i0vu")
+texture = ExtResource("6_ytgvi")
 region_rect = Rect2(480, 176, 46, 30)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_brm1n"]
-texture = ExtResource("4_0i0vu")
+texture = ExtResource("6_ytgvi")
 region_rect = Rect2(481, 209, 46, 30)
 
 [node name="Login Control" type="Control"]
@@ -41,7 +41,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_n0ftr")
+script = ExtResource("1_fbq66")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 modulate = Color(1, 1, 1, 0.745098)
@@ -60,7 +60,7 @@ color = Color(0.678431, 0.894118, 0.92549, 1)
 [node name="PopBackground2" type="Sprite2D" parent="."]
 position = Vector2(540, 960)
 scale = Vector2(1.82868, 1.49922)
-texture = ExtResource("1_n5i6c")
+texture = ExtResource("2_fgmiv")
 
 [node name="Top Banner Container" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -87,7 +87,7 @@ custom_minimum_size = Vector2(950, 400)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource("2_qndqj")
+theme_override_fonts/font = ExtResource("3_xqp4o")
 theme_override_font_sizes/font_size = 115
 text = "Balloon Pop!"
 horizontal_alignment = 1
@@ -124,7 +124,7 @@ theme_override_constants/separation = 25
 [node name="name label" type="Label" parent="UI/VBoxContainer/Name Control/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.152941, 0.352941, 0.380392, 1)
-theme_override_fonts/font = ExtResource("2_qndqj")
+theme_override_fonts/font = ExtResource("3_xqp4o")
 theme_override_font_sizes/font_size = 45
 text = "What is your name?"
 horizontal_alignment = 1
@@ -140,7 +140,7 @@ placeholder_text = "Name..."
 custom_minimum_size = Vector2(900, 100)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.152941, 0.352941, 0.380392, 1)
-theme_override_fonts/font = ExtResource("2_qndqj")
+theme_override_fonts/font = ExtResource("3_xqp4o")
 theme_override_font_sizes/font_size = 40
 text = "What would you like your username to be?"
 horizontal_alignment = 1
@@ -173,7 +173,7 @@ theme_override_constants/separation = 50
 [node name="Age Prompt" type="Label" parent="UI/VBoxContainer/Age Control/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.152941, 0.352941, 0.380392, 1)
-theme_override_fonts/font = ExtResource("2_qndqj")
+theme_override_fonts/font = ExtResource("3_xqp4o")
 theme_override_font_sizes/font_size = 45
 text = "How old are you?"
 horizontal_alignment = 1
@@ -198,7 +198,7 @@ theme_override_constants/separation = 20
 [node name="Gender Label" type="Label" parent="UI/VBoxContainer/Gender Control/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.152941, 0.352941, 0.380392, 1)
-theme_override_fonts/font = ExtResource("2_qndqj")
+theme_override_fonts/font = ExtResource("3_xqp4o")
 theme_override_font_sizes/font_size = 65
 text = "I am a..."
 horizontal_alignment = 1
@@ -209,7 +209,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 40
 toggle_mode = true
-button_group = ExtResource("4_bmjec")
+button_group = ExtResource("4_6hr56")
 text = "Boy"
 
 [node name="Girl" type="Button" parent="UI/VBoxContainer/Gender Control/VBoxContainer"]
@@ -245,11 +245,11 @@ offset_right = -49.0
 offset_bottom = -87.0
 grow_horizontal = 0
 grow_vertical = 0
-theme = ExtResource("3_lbk1d")
+theme = ExtResource("5_gy32m")
 theme_override_colors/font_hover_pressed_color = Color(0.862745, 0.72549, 0.541176, 1)
 theme_override_colors/font_hover_color = Color(0.647059, 0.505882, 0.360784, 1)
 theme_override_colors/font_color = Color(0.647059, 0.505882, 0.360784, 1)
-theme_override_fonts/font = ExtResource("2_qndqj")
+theme_override_fonts/font = ExtResource("3_xqp4o")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/hover = SubResource("StyleBoxTexture_7epeb")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_u627p")
