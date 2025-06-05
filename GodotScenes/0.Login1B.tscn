@@ -1,0 +1,257 @@
+[gd_scene load_steps=11 format=3 uid="uid://dn2mkqihxvm10"]
+
+[ext_resource type="Script" path="res://GodotScenes/Scripts/0.login.gd" id="1_m8raj"]
+[ext_resource type="Texture2D" uid="uid://c1ivajqkfly67" path="res://GodotScenes/PopBackground.png" id="2_2ih8n"]
+[ext_resource type="FontFile" uid="uid://u2glbe4yi5or" path="res://Daydream.ttf" id="3_4vdht"]
+[ext_resource type="ButtonGroup" uid="uid://datwpc5x53xo8" path="res://buttonGroupLogin.tres" id="4_ufmrx"]
+[ext_resource type="Theme" uid="uid://di8j0vc35jjfo" path="res://Themes/Button.tres" id="5_vgld6"]
+[ext_resource type="Texture2D" uid="uid://g65gb7cfq3na" path="res://GodotScenes/TilesetPopBalloon.png" id="6_jxfrk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aq2pf"]
+bg_color = Color(0.55364, 0.839646, 0.880708, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.372436, 0.691766, 0.733776, 1)
+corner_radius_top_left = 75
+corner_radius_top_right = 75
+corner_radius_bottom_right = 75
+corner_radius_bottom_left = 75
+shadow_color = Color(0.157744, 0.353875, 0.380674, 1)
+shadow_size = 8
+shadow_offset = Vector2(0, 10)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7epeb"]
+texture = ExtResource("6_jxfrk")
+region_rect = Rect2(432, 176, 46, 30)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u627p"]
+texture = ExtResource("6_jxfrk")
+region_rect = Rect2(480, 176, 46, 30)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_brm1n"]
+texture = ExtResource("6_jxfrk")
+region_rect = Rect2(481, 209, 46, 30)
+
+[node name="Login Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m8raj")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0.745098)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -351.0
+offset_top = -322.0
+offset_right = 2552.0
+offset_bottom = 2286.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.678431, 0.894118, 0.92549, 1)
+
+[node name="PopBackground2" type="Sprite2D" parent="."]
+position = Vector2(540, 960)
+scale = Vector2(1.82868, 1.49922)
+texture = ExtResource("2_2ih8n")
+
+[node name="Top Banner Container" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="Panel" type="Panel" parent="Top Banner Container"]
+custom_minimum_size = Vector2(950, 400)
+layout_direction = 1
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_aq2pf")
+
+[node name="Balloon Pop" type="Label" parent="Top Banner Container"]
+custom_minimum_size = Vector2(950, 400)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("3_4vdht")
+theme_override_font_sizes/font_size = 115
+text = "Balloon Pop!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="UI" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 464.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI"]
+layout_mode = 2
+
+[node name="Name Control" type="Control" parent="UI/VBoxContainer"]
+custom_minimum_size = Vector2(1020, 500)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/VBoxContainer/Name Control"]
+layout_mode = 2
+offset_left = 15.0
+offset_right = 1067.0
+offset_bottom = 492.0
+theme_override_constants/separation = 25
+
+[node name="name label" type="Label" parent="UI/VBoxContainer/Name Control/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.152941, 0.352941, 0.380392, 1)
+theme_override_fonts/font = ExtResource("3_4vdht")
+theme_override_font_sizes/font_size = 45
+text = "What is your name?"
+horizontal_alignment = 1
+
+[node name="Name TextEdit" type="TextEdit" parent="UI/VBoxContainer/Name Control/VBoxContainer"]
+custom_minimum_size = Vector2(600, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Name..."
+
+[node name="username label" type="Label" parent="UI/VBoxContainer/Name Control/VBoxContainer"]
+custom_minimum_size = Vector2(900, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.152941, 0.352941, 0.380392, 1)
+theme_override_fonts/font = ExtResource("3_4vdht")
+theme_override_font_sizes/font_size = 40
+text = "What would you like your username to be?"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Username TextEdit" type="TextEdit" parent="UI/VBoxContainer/Name Control/VBoxContainer"]
+custom_minimum_size = Vector2(600, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 35
+placeholder_text = "Username..."
+
+[node name="Label" type="Label" parent="UI/VBoxContainer/Name Control/VBoxContainer"]
+layout_mode = 2
+text = "The username works!"
+horizontal_alignment = 1
+
+[node name="Age Control" type="Control" parent="UI/VBoxContainer"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/VBoxContainer/Age Control"]
+layout_mode = 2
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 1065.0
+offset_bottom = 287.0
+theme_override_constants/separation = 50
+
+[node name="Age Prompt" type="Label" parent="UI/VBoxContainer/Age Control/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.152941, 0.352941, 0.380392, 1)
+theme_override_fonts/font = ExtResource("3_4vdht")
+theme_override_font_sizes/font_size = 45
+text = "How old are you?"
+horizontal_alignment = 1
+
+[node name="Age TextEdit" type="TextEdit" parent="UI/VBoxContainer/Age Control/VBoxContainer"]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/caret_background_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 45
+
+[node name="Gender Control" type="Control" parent="UI/VBoxContainer"]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/VBoxContainer/Gender Control"]
+layout_mode = 2
+offset_right = 1050.0
+offset_bottom = 220.0
+theme_override_constants/separation = 20
+
+[node name="Gender Label" type="Label" parent="UI/VBoxContainer/Gender Control/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.152941, 0.352941, 0.380392, 1)
+theme_override_fonts/font = ExtResource("3_4vdht")
+theme_override_font_sizes/font_size = 65
+text = "I am a..."
+horizontal_alignment = 1
+
+[node name="Boy" type="Button" parent="UI/VBoxContainer/Gender Control/VBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 40
+toggle_mode = true
+button_group = ExtResource("4_ufmrx")
+text = "Boy"
+
+[node name="Girl" type="Button" parent="UI/VBoxContainer/Gender Control/VBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 40
+toggle_mode = true
+text = "Girl"
+
+[node name="Non-Binary" type="Button" parent="UI/VBoxContainer/Gender Control/VBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 40
+toggle_mode = true
+text = "Non-Binary"
+
+[node name="LobbyPlaceholder" type="Node" parent="."]
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -352.0
+offset_top = -200.0
+offset_right = -49.0
+offset_bottom = -87.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("5_vgld6")
+theme_override_colors/font_hover_pressed_color = Color(0.862745, 0.72549, 0.541176, 1)
+theme_override_colors/font_hover_color = Color(0.647059, 0.505882, 0.360784, 1)
+theme_override_colors/font_color = Color(0.647059, 0.505882, 0.360784, 1)
+theme_override_fonts/font = ExtResource("3_4vdht")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxTexture_7epeb")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_u627p")
+theme_override_styles/normal = SubResource("StyleBoxTexture_brm1n")
+text = "next"

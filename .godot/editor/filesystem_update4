@@ -9,3 +9,7 @@ res://GodotScenes/5.Summary.tscn
 res://GodotScenes/9.GreenBalloon.tscn
 res://GodotScenes/3.PreContestant.tscn
 res://GodotScenes/Scripts/0.login.gd
+res://GodotScenes/0.Login1A.tscn
+res://GodotScenes/0.Login1B.tscn
+res://GodotScenes/0.Login1C.tscn
+res://GodotScenes/2.Judge.tscn
